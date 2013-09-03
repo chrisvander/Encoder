@@ -87,11 +87,10 @@
       messageText.text = @" ";
    }
     NSString *message = messageText.text;
-    NSString *input = message;
-    NSString *output = @"";
+    outputst = @"";
     NSUInteger messageLength = [message length];
-    NSInteger key = [keyLabel.text intValue];
-    NSInteger paths = [pathsLabel.text intValue];
+    keyi = [keyLabel.text intValue];
+    path = [pathsLabel.text intValue];
     NSInteger loop = 0;
     message=[[NSString alloc] initWithData:[message dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES] encoding:NSASCIIStringEncoding];
     message=[message stringByReplacingOccurrencesOfString:@"9" withString:@"99."];
@@ -133,8 +132,8 @@
     message=[message stringByReplacingOccurrencesOfString:@" " withString:@"37."];
     message=[message uppercaseString];
     NSLog(@"Encoded string [%@]", message);
-    NSInteger ra = (arc4random()%(paths * 16) + 1);
-    NSInteger r = (arc4random()%((key * 12) * 128) + 1);
+    NSInteger ra = (arc4random()%(path * 16) + 1);
+    NSInteger r = (arc4random()%((keyi * 12) * 128) + 1);
     NSArray *unmutableArray = [message componentsSeparatedByString:@"."];
     NSMutableArray *arr = [(NSArray *) unmutableArray mutableCopy];
     NSLog(@"Converting via 'Key Length'");
@@ -146,10 +145,10 @@
         [arr replaceObjectAtIndex:loop withObject:tempStr];
         loop++;
         NSLog(@"%@", tempStr);
-        output = [NSString stringWithFormat:@"%@%@-", output, tempStr];
+        outputst = [NSString stringWithFormat:@"%@%@-", output, tempStr];
     }
-    output = [output substringToIndex:[output length] - 1];
-    output = [NSString stringWithFormat:@"%@\nKey: %d.%d", output, (r * ra), ra];
+    outputst = [outputst substringToIndex:[outputst length] - 1];
+    outputst = [NSString stringWithFormat:@"%@\nKey: %d.%d", output, (r * ra), ra];
     [arr removeLastObject];
     NSUserDefaults *defaults = [[NSUserDefaults alloc] init];
     [defaults setObject:output forKey:@"output"];

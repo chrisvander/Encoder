@@ -16,6 +16,9 @@
     IBOutlet UILabel *keyLabel;
     IBOutlet UILabel *pathsLabel;
     IBOutlet UIProgressView *encoding;
+    NSInteger path;
+    NSInteger keyi;
+    NSString *outputst;
     
     IBOutlet UITextView *output;
 }

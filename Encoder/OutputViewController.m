@@ -43,7 +43,7 @@
 
 - (IBAction)sendTo
 {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Message", @"Email", nil];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Choose how to send" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Message", @"Email", nil];
     [actionSheet showFromBarButtonItem:sendTo animated:YES];
 }
 

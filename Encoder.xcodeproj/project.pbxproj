@@ -233,6 +233,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "iD Student";
+				TargetAttributes = {
+					3F9B724E17831A6800D18C78 = {
+						DevelopmentTeam = P5ESB223BE;
+					};
+				};
 			};
 			buildConfigurationList = 3F9B724A17831A6800D18C78 /* Build configuration list for PBXProject "Encoder" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -416,7 +421,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Encoder/Encoder-Prefix.pch";
 				INFOPLIST_FILE = "Encoder/Encoder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -430,7 +435,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Encoder/Encoder-Prefix.pch";
 				INFOPLIST_FILE = "Encoder/Encoder-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
