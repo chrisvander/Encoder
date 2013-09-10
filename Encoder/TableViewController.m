@@ -145,13 +145,13 @@
         [arr replaceObjectAtIndex:loop withObject:tempStr];
         loop++;
         NSLog(@"%@", tempStr);
-        outputst = [NSString stringWithFormat:@"%@%@-", output, tempStr];
+        outputst = [NSString stringWithFormat:@"%@%@-", outputst, tempStr];
     }
     outputst = [outputst substringToIndex:[outputst length] - 1];
-    outputst = [NSString stringWithFormat:@"%@\nKey: %d.%d", output, (r * ra), ra];
+    outputst = [NSString stringWithFormat:@"%@\nKey: %d.%d", outputst, (r * ra), ra];
     [arr removeLastObject];
     NSUserDefaults *defaults = [[NSUserDefaults alloc] init];
-    [defaults setObject:output forKey:@"output"];
+    [defaults setObject:outputst forKey:@"output"];
    if ([[UIDevice currentDevice] userInterfaceIdiom] ==UIUserInterfaceIdiomPhone) {
       [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(interval) userInfo:nil repeats:NO];
    }
