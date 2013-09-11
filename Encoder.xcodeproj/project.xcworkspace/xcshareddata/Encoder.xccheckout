@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>1787194A-9609-417C-AE01-4B09B48E47E7</string>
+	<string>FD2B0AF8-72C9-4A03-A050-8C33FA8A707B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Encoder</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -12,11 +14,11 @@
 		<string>https://github.com/chrisvander/Encoder.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Encoder.xcodeproj/project.xcworkspace</string>
+	<string>Encoder/Encoder.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>65B2C520-EEA9-4564-B688-E0BBE9EB3FE0</key>
-		<string>../..</string>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/chrisvander/Encoder.git</string>
