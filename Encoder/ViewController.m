@@ -54,7 +54,7 @@
             NSLog(@"Upside Down");
             menuButton.enabled = NO;
         }
-        else {
+        else if (orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight){
             NSLog(@"Landscape");
             menuButton.enabled = NO;
         }
@@ -77,6 +77,11 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] ==UIUserInterfaceIdiomPad) {
         [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged) name:UIDeviceOrientationDidChangeNotification object:nil];
+    }
+    UIDeviceOrientation orientation = [UIDevice currentDevice].orientation;
+    if (orientation == UIDeviceOrientationPortrait) {
+        NSLog(@"Portrait");
+        menuButton.enabled = YES;
     }
 }
 

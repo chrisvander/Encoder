@@ -58,7 +58,6 @@
    pathsLabel.text = [NSString stringWithFormat:@"%.f", paths.value];
    messageText.autocorrectionType = UITextAutocorrectionTypeNo;
    messageText.autocapitalizationType = UITextAutocapitalizationTypeNone;
-   self.navigationController.navigationBar.backgroundColor = [UIColor blueColor];
    self.tableView.tintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.9 alpha:1];
    
     encoding.hidden = YES;
