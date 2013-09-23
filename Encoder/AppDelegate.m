@@ -18,6 +18,10 @@
     } else {
         storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard-iPhone" bundle:[NSBundle mainBundle]];
     }
+    
+    UIImage *navBackgroundImage = [UIImage imageNamed:@"navbar_bg@2x.png"];
+    [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
+
     UIViewController *vc =[storyboard instantiateInitialViewController];
     
     // Set root view controller and make windows visible

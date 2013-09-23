@@ -42,15 +42,15 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <progressView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" id="cmb-Hm-sAw">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="2"/>
+                        <progressView key="tableFooterView" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" id="cmb-Hm-sAw">
+                            <rect key="frame" x="0.0" y="353" width="320" height="2"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </progressView>
                         <sections>
                             <tableViewSection headerTitle="Message" id="4nE-3B-5CO">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Nhi-np-L4X">
-                                        <rect key="frame" x="0.0" y="57" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nhi-np-L4X" id="ajU-7n-OSm">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -70,7 +70,7 @@
                             <tableViewSection headerTitle="Options" id="ep4-UK-vl9">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="d5B-s7-FFC">
-                                        <rect key="frame" x="0.0" y="149" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="147" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d5B-s7-FFC" id="ynO-MU-NHw">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -99,7 +99,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="dv6-Dx-YeT">
-                                        <rect key="frame" x="0.0" y="193" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="191" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dv6-Dx-YeT" id="DAb-xj-I3D">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -128,7 +128,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="gje-A1-akv">
-                                        <rect key="frame" x="0.0" y="237" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="235" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gje-A1-akv" id="ht1-vy-rdh">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -138,7 +138,7 @@
                                                     <rect key="frame" x="0.0" y="-7" width="320" height="57"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" title="Encode">
-                                                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.11564781020000001" green="0.0" blue="0.71490077549999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <state key="highlighted">
@@ -156,7 +156,7 @@
                             <tableViewSection id="ud5-eh-6p6">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="0FE-J9-5H1" style="IBUITableViewCellStyleDefault" id="Zj9-8i-bwt">
-                                        <rect key="frame" x="0.0" y="301" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="299" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zj9-8i-bwt" id="rO7-5o-Q5D">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -188,6 +188,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="encoding" destination="cmb-Hm-sAw" id="1py-EZ-cdV"/>
@@ -270,7 +271,7 @@
                     <navigationItem key="navigationItem" title="Output" id="qf8-AJ-5Pc">
                         <barButtonItem key="backBarButtonItem" title="Back" id="10v-bh-BTY"/>
                         <barButtonItem key="rightBarButtonItem" title="Send To" id="R2H-Zg-cge">
-                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.11564781020000001" green="0.0" blue="0.71490077549999997" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="sendTo" destination="RX2-uR-itm" id="QMu-bC-FCh"/>
                             </connections>
@@ -353,7 +354,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="Decode">
-                                                        <color key="titleColor" red="0.00053359762919999996" green="0.57330306740000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleColor" red="0.11564781020000001" green="0.0" blue="0.71490077549999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <state key="highlighted">
@@ -440,7 +441,7 @@
             <point key="canvasLocation" x="-145" y="190"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.1156478102189781" green="0.0" blue="0.71490077554744524" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -59,8 +59,8 @@
    messageText.autocorrectionType = UITextAutocorrectionTypeNo;
    messageText.autocapitalizationType = UITextAutocapitalizationTypeNone;
    self.tableView.tintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.9 alpha:1];
-   
-    encoding.hidden = YES;
+   self.view.window.tintColor = [UIColor redColor];
+   encoding.hidden = YES;
 }
 
 - (IBAction)stepperValueChanged:(id)sender
