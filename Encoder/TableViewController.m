@@ -61,6 +61,7 @@
    messageText.autocapitalizationType = UITextAutocapitalizationTypeNone;
    self.tableView.tintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.9 alpha:1];
    self.view.window.tintColor = [UIColor redColor];
+   self.tableView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:1 alpha:1];
    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                           [UIColor colorWithRed:0.0/0.0 green:0.0/0.0 blue:0.0/0.0 alpha:1.0], UITextAttributeTextColor,
                                                           [UIFont fontWithName:@"HelveticaNeue-Light" size:21.0], UITextAttributeFont, nil]];

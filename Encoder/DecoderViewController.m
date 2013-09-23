@@ -142,6 +142,7 @@
 {
     [super viewDidLoad];
     decoding.hidden = YES;
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:1 alpha:1];
     encryption.delegate=self;
     keyString.delegate=self;
     if ([[UIDevice currentDevice] userInterfaceIdiom] ==UIUserInterfaceIdiomPhone) {

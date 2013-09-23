@@ -83,6 +83,7 @@
         NSLog(@"Portrait");
         menuButton.enabled = YES;
     }
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:1 alpha:1];
 }
 
 - (void)didReceiveMemoryWarning
