@@ -143,20 +143,8 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1234567890" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q7D-Rw-rUu">
-                                                    <rect key="frame" x="61" y="5" width="141" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
-                                                </textField>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbY-cd-uZN">
-                                                    <rect key="frame" x="202" y="18" width="5" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1234" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KfQ-wF-thb">
-                                                    <rect key="frame" x="210" y="5" width="81" height="30"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1234567890" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KfQ-wF-thb">
+                                                    <rect key="frame" x="84" y="5" width="207" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -240,7 +228,6 @@
                         <outlet property="encoding" destination="cmb-Hm-sAw" id="1py-EZ-cdV"/>
                         <outlet property="help" destination="P3Z-lf-Ox6" id="2Kq-j0-dnS"/>
                         <outlet property="key" destination="wTc-ac-wYe" id="zVv-NB-yEK"/>
-                        <outlet property="key1" destination="Q7D-Rw-rUu" id="dQB-Ma-RHX"/>
                         <outlet property="key2" destination="KfQ-wF-thb" id="a1o-8y-Vwd"/>
                         <outlet property="keyLabel" destination="j8y-Yb-SNw" id="UJ8-nK-7wN"/>
                         <outlet property="messageText" destination="Ecf-99-QEs" id="3U8-4H-B2X"/>
@@ -510,7 +497,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pullover.png" width="25" height="26"/>
         <image name="pullover.png" width="25" height="26"/>
     </resources>
     <color key="tintColor" red="0.1156478102189781" green="0.0" blue="0.71490077554744524" alpha="1" colorSpace="calibratedRGB"/>

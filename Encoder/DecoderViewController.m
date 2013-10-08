@@ -77,12 +77,19 @@
     [decoding setProgress:0 animated:NO];
     encryptionStr = encryption.text;
     NSLog(@"Encryption String: %@", encryptionStr);
-    NSString *key = keyString.text;
-    NSArray *keyArr = [key componentsSeparatedByString:@"."];
-    NSString *firstKey = [keyArr objectAtIndex:0];
-    NSLog(@"First: %@", firstKey);
-    NSString *keyDecode = [keyArr objectAtIndex:1];
-    NSLog(@"Key Decode: %@", keyDecode);
+    NSString *firstKey;
+    NSString *keyDecode;
+    if (!thePK) {
+        NSString *key = keyString.text;
+        NSArray *keyArr = [key componentsSeparatedByString:@"."];
+        firstKey = [keyArr objectAtIndex:0];
+        NSLog(@"First: %@", firstKey);
+        keyDecode = [keyArr objectAtIndex:1];
+        NSLog(@"Key Decode: %@", keyDecode);
+    }
+    else {
+        keyDecode = keyString.text;
+    }
     NSInteger keyInt;
     if (thePK)
     {

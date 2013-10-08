@@ -191,7 +191,7 @@
     }
     outputst = [outputst substringToIndex:[outputst length] - 1];
    if (keycode) {
-      outputst = [NSString stringWithFormat:@"%@\nKey: PK-%d", outputst, (r * ra)];
+      outputst = [NSString stringWithFormat:@"%@\nKey: PK", outputst];
    }
    else {
       outputst = [NSString stringWithFormat:@"%@\nKey: %d.%d", outputst, (r * ra), ra];
