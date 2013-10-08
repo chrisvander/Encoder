@@ -8,6 +8,8 @@
 
 #import "TableViewController.h"
 #import "DecoderViewController.h"
+#import "SidebarViewController.h"
+#import "SWRevealViewController.h"
 
 @interface DecoderViewController ()
 
@@ -47,6 +49,16 @@
             encryption.text = [arr objectAtIndex:0];
             keyString.text = [arr objectAtIndex:1];
         }
+        if ([keyString.text  isEqual: @"PK"])
+        {
+            thePK = YES;
+            keyString.text = @"";
+            keyString.placeholder = @"Please enter your Personal Key";
+        }
+        else
+        {
+            thePK = NO;
+        }
     }
 }
 
@@ -71,7 +83,15 @@
     NSLog(@"First: %@", firstKey);
     NSString *keyDecode = [keyArr objectAtIndex:1];
     NSLog(@"Key Decode: %@", keyDecode);
-    NSInteger keyInt = [firstKey intValue] / [keyDecode intValue];
+    NSInteger keyInt;
+    if (thePK)
+    {
+        keyInt = [keyDecode intValue];
+    }
+    else {
+        keyInt = [firstKey intValue] / [keyDecode intValue];
+    }
+    
     NSLog(@"Total Key Int: %ld", (long)keyInt);
     NSArray *encryptionArr = [encryptionStr componentsSeparatedByString:@"-"];
     NSLog(@"%lu", (unsigned long)[encryptionArr count]);
@@ -148,6 +168,12 @@
     if ([[UIDevice currentDevice] userInterfaceIdiom] ==UIUserInterfaceIdiomPhone) {
         self.tableView.tintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.9 alpha:1];
     }
+    // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+    pullOver.target = self.revealViewController;
+    pullOver.action = @selector(revealToggle:);
+    
+    // Set the gesture
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning

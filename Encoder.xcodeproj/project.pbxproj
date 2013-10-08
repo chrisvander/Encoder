@@ -26,6 +26,9 @@
 		3F9B728417831A6900D18C78 /* EncoderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B728317831A6900D18C78 /* EncoderTests.m */; };
 		3F9B728F17831D9000D18C78 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B728E17831D9000D18C78 /* TableViewController.m */; };
 		3FECC4A91784B81700274C4A /* OutputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FECC4A81784B81700274C4A /* OutputViewController.m */; };
+		8337407917FD08950077F878 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8337407817FD08950077F878 /* SWRevealViewController.m */; };
+		8337407F17FD110C0077F878 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8337407E17FD110C0077F878 /* SidebarViewController.m */; };
+		835FC7D817F3CFFC003E71AD /* pullover.png in Resources */ = {isa = PBXBuildFile; fileRef = 835FC7D717F3CFFC003E71AD /* pullover.png */; };
 		839B4EAB17A0245D00801BCA /* MainStoryboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E9BA2217A0114800C34B4E /* MainStoryboard-iPad.storyboard */; };
 		83A94B2C17F0DB310034BF07 /* navbar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A94B2B17F0DB310034BF07 /* navbar_bg@2x.png */; };
 		83D6E2F317A0C44F009DD6D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8307153717A096A100C6A3BC /* ViewController.m */; };
@@ -73,6 +76,11 @@
 		3FECC4A81784B81700274C4A /* OutputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutputViewController.m; sourceTree = "<group>"; };
 		8307153617A096A100C6A3BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8307153717A096A100C6A3BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8337407717FD08950077F878 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		8337407817FD08950077F878 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		8337407D17FD110C0077F878 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SidebarViewController.h; path = ../SidebarViewController.h; sourceTree = "<group>"; };
+		8337407E17FD110C0077F878 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarViewController.m; path = ../SidebarViewController.m; sourceTree = "<group>"; };
+		835FC7D717F3CFFC003E71AD /* pullover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pullover.png; sourceTree = "<group>"; };
 		83A94B2B17F0DB310034BF07 /* navbar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_bg@2x.png"; sourceTree = "<group>"; };
 		83E3D0FA17D396B900B8B212 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		83E9BA2217A0114800C34B4E /* MainStoryboard-iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "MainStoryboard-iPad.storyboard"; sourceTree = "<group>"; };
@@ -144,6 +152,8 @@
 				3F9B726217831A6800D18C78 /* AppDelegate.m */,
 				3F9B726A17831A6900D18C78 /* MainStoryboard-iPhone.storyboard */,
 				83E9BA2217A0114800C34B4E /* MainStoryboard-iPad.storyboard */,
+				8337407D17FD110C0077F878 /* SidebarViewController.h */,
+				8337407E17FD110C0077F878 /* SidebarViewController.m */,
 				3FECC4A71784B81700274C4A /* OutputViewController.h */,
 				3FECC4A81784B81700274C4A /* OutputViewController.m */,
 				3F76021E178454EA00B5D595 /* DecoderViewController.h */,
@@ -153,6 +163,7 @@
 				8307153617A096A100C6A3BC /* ViewController.h */,
 				8307153717A096A100C6A3BC /* ViewController.m */,
 				83F4DAC717E01116001997F6 /* Images.xcassets */,
+				8337407617FD08950077F878 /* SWRevealViewController */,
 				3F9B725917831A6800D18C78 /* Supporting Files */,
 			);
 			path = Encoder;
@@ -161,6 +172,7 @@
 		3F9B725917831A6800D18C78 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				835FC7D717F3CFFC003E71AD /* pullover.png */,
 				83A94B2B17F0DB310034BF07 /* navbar_bg@2x.png */,
 				3F9B725A17831A6800D18C78 /* Encoder-Info.plist */,
 				3F9B725B17831A6800D18C78 /* InfoPlist.strings */,
@@ -190,6 +202,15 @@
 				3F9B727F17831A6900D18C78 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8337407617FD08950077F878 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8337407717FD08950077F878 /* SWRevealViewController.h */,
+				8337407817FD08950077F878 /* SWRevealViewController.m */,
+			);
+			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +291,7 @@
 			files = (
 				3F9B725D17831A6800D18C78 /* InfoPlist.strings in Resources */,
 				3F9B726517831A6800D18C78 /* Default.png in Resources */,
+				835FC7D817F3CFFC003E71AD /* pullover.png in Resources */,
 				83F4DAC817E01116001997F6 /* Images.xcassets in Resources */,
 				3F9B726717831A6800D18C78 /* Default@2x.png in Resources */,
 				3F9B726917831A6800D18C78 /* Default-568h@2x.png in Resources */,
@@ -310,8 +332,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8337407917FD08950077F878 /* SWRevealViewController.m in Sources */,
 				3F9B725F17831A6800D18C78 /* main.m in Sources */,
 				3F9B726317831A6800D18C78 /* AppDelegate.m in Sources */,
+				8337407F17FD110C0077F878 /* SidebarViewController.m in Sources */,
 				3F9B728F17831D9000D18C78 /* TableViewController.m in Sources */,
 				3F760220178454EA00B5D595 /* DecoderViewController.m in Sources */,
 				3FECC4A91784B81700274C4A /* OutputViewController.m in Sources */,

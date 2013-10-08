@@ -16,6 +16,9 @@
     IBOutlet UIProgressView *decoding;
     NSString *encryptionStr;
     NSString *output;
+    IBOutlet UIBarButtonItem *pullOver;
+    
+    BOOL thePK;
 }
 @property (nonatomic, retain) IBOutlet UITextField *encryption;
 @property (nonatomic, retain) IBOutlet UITextField *keyString;

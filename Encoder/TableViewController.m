@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "OutputViewController.h"
+#import "SWRevealViewController.h"
 
 @interface TableViewController ()
 
@@ -15,7 +16,6 @@
 
 @implementation TableViewController
 @synthesize messageText;
-
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -46,34 +46,58 @@
    return NO;
 }
 
+-(void)doneWithNumberPad{
+   [key1 resignFirstResponder];
+   [key2 resignFirstResponder];
+}
+
+- (IBAction)help
+{
+   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Help" message:@"If left blank, the key will be generated randomly. However, if you enter a string of numbers that a friend can remember, he/she can decode the message with his/her specific key. This keeps from anyone else with the app getting ahold of the message you are trying to send unless they have that key. This is also why we call it 'the key'." delegate:nil cancelButtonTitle:@"Got it!" otherButtonTitles:nil, nil];
+   [alert show];
+}
+
 - (void)viewDidLoad
 {
    [super viewDidLoad];
+   
+   UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+   numberToolbar.barStyle = UIBarStyleBlackOpaque;
+   numberToolbar.items = [NSArray arrayWithObjects:
+                          [[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
+                          nil];
+   [numberToolbar sizeToFit];
+   key1.inputAccessoryView = numberToolbar;
+   key2.inputAccessoryView = numberToolbar;
+   
    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
    [messageText setDelegate:self];
-   key.minimumValue = 1;
-   key.maximumValue = 50;
-   paths.minimumValue = 1;
-   paths.maximumValue = 50;
    keyLabel.text = [NSString stringWithFormat:@"%.f", key.value];
-   pathsLabel.text = [NSString stringWithFormat:@"%.f", paths.value];
    messageText.autocorrectionType = UITextAutocorrectionTypeNo;
    messageText.autocapitalizationType = UITextAutocapitalizationTypeNone;
    self.tableView.tintColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.9 alpha:1];
    self.view.window.tintColor = [UIColor redColor];
    self.tableView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:1 alpha:1];
+   navBar.barTintColor = [UIColor redColor];
    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
                                                           [UIColor colorWithRed:0.0/0.0 green:0.0/0.0 blue:0.0/0.0 alpha:1.0], UITextAttributeTextColor,
                                                           [UIFont fontWithName:@"HelveticaNeue-Light" size:21.0], UITextAttributeFont, nil]];
    encoding.hidden = YES;
+   
+   // Set the side bar button action. When it's tapped, it'll show up the sidebar.
+   pullOver.target = self.revealViewController;
+   pullOver.action = @selector(revealToggle:);
+   
+   // Set the gesture
+   [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+   
+   [key addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
 }
 
-- (IBAction)stepperValueChanged:(id)sender
+- (IBAction)sliderValueChanged:(UISlider *)sender
 {
     double keyStepperValue = key.value;
     keyLabel.text = [NSString stringWithFormat:@"%.f", keyStepperValue];
-    double pathStepperValue = paths.value;
-    pathsLabel.text = [NSString stringWithFormat:@"%.f", pathStepperValue];
 }
 
 - (IBAction)encodeButtonPressed {
@@ -94,7 +118,6 @@
     outputst = @"";
     NSUInteger messageLength = [message length];
     keyi = [keyLabel.text intValue];
-    path = [pathsLabel.text intValue];
     NSInteger loop = 0;
     message=[[NSString alloc] initWithData:[message dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES] encoding:NSASCIIStringEncoding];
     message=[message stringByReplacingOccurrencesOfString:@"9" withString:@"99."];
@@ -136,8 +159,23 @@
     message=[message stringByReplacingOccurrencesOfString:@" " withString:@"37."];
     message=[message uppercaseString];
     NSLog(@"Encoded string [%@]", message);
-    NSInteger ra = (arc4random()%(path * 16) + 1);
-    NSInteger r = (arc4random()%((keyi * 12) * 128) + 1);
+   BOOL keycode;
+   NSInteger ra2;
+   if ([key1.text  isEqual: @""] || [key2.text  isEqual: @""])
+   {
+      ra = (arc4random()%(keyi * 16) + 1);
+      r = (arc4random()%((keyi * 12) * 128) + 1);
+      keycode = NO;
+   }
+   else
+   {
+      NSString *rat = key1.text;
+      NSString *rt = key2.text;
+      ra2 = [rat integerValue];
+      r = [rt integerValue];
+      keycode = YES;
+      ra = (ra2 / r);
+   }
     NSArray *unmutableArray = [message componentsSeparatedByString:@"."];
     NSMutableArray *arr = [(NSArray *) unmutableArray mutableCopy];
     NSLog(@"Converting via 'Key Length'");
@@ -152,8 +190,13 @@
         outputst = [NSString stringWithFormat:@"%@%@-", outputst, tempStr];
     }
     outputst = [outputst substringToIndex:[outputst length] - 1];
-    outputst = [NSString stringWithFormat:@"%@\nKey: %d.%d", outputst, (r * ra), ra];
-    [arr removeLastObject];
+   if (keycode) {
+      outputst = [NSString stringWithFormat:@"%@\nKey: PK-%d", outputst, (r * ra)];
+   }
+   else {
+      outputst = [NSString stringWithFormat:@"%@\nKey: %d.%d", outputst, (r * ra), ra];
+   }
+   [arr removeLastObject];
     NSUserDefaults *defaults = [[NSUserDefaults alloc] init];
     [defaults setObject:outputst forKey:@"output"];
    if ([[UIDevice currentDevice] userInterfaceIdiom] ==UIUserInterfaceIdiomPhone) {

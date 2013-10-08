@@ -11,14 +11,18 @@
 @interface TableViewController : UITableViewController <UITextFieldDelegate>
 {
     IBOutlet UITextField *messageText;
-    IBOutlet UIStepper *key;
-    IBOutlet UIStepper *paths;
+    IBOutlet UISlider *key;
     IBOutlet UILabel *keyLabel;
-    IBOutlet UILabel *pathsLabel;
     IBOutlet UIProgressView *encoding;
-    NSInteger path;
     NSInteger keyi;
+    NSInteger r;
+    NSInteger ra;
+    IBOutlet UITextField *key1;
+    IBOutlet UITextField *key2;
     NSString *outputst;
+    IBOutlet UINavigationBar *navBar;
+    IBOutlet UIBarButtonItem *pullOver;
+    IBOutlet UIButton *help;
     
     IBOutlet UITextView *output;
 }
@@ -26,5 +30,6 @@
 @property (nonatomic, retain) IBOutlet UITextField *messageText;
 
 - (IBAction)encodeButtonPressed;
+- (IBAction)help;
 
 @end
