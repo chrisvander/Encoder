@@ -51,7 +51,7 @@
 {
     [super viewDidLoad];
     
-    _menuItems = @[@"encode", @"decode"];
+    _menuItems = @[@"encoder", @"encode", @"decode"];
 }
 
 - (void)didReceiveMemoryWarning

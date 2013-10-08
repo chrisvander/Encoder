@@ -21,8 +21,8 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="uiu-uh-LbD" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegue" id="NK3-41-1fZ"/>
                         <segue destination="ohU-iJ-eIP" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegue" id="VUy-hi-8C5"/>
+                        <segue destination="uiu-uh-LbD" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegue" id="kdc-0S-dSI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gxj-Un-hxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -40,8 +40,26 @@
                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexTrackingBackgroundColor" white="0.1955976277" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="encode" id="qFq-Ri-oad">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="encoder" id="hUK-82-IE1">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hUK-82-IE1" id="Oj5-90-eB0">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ENCODER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nY-0M-hPp">
+                                            <rect key="frame" x="11" y="3" width="194" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="27"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.1955976277" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="encode" id="qFq-Ri-oad">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qFq-Ri-oad" id="Wyw-gb-6Uv">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -62,7 +80,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="decode" id="NLW-nA-7uc">
-                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="110" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NLW-nA-7uc" id="SPz-S1-QI6">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -498,6 +516,7 @@
     </scenes>
     <resources>
         <image name="pullover.png" width="25" height="26"/>
+        <image name="pullover.png" width="25" height="26"/>
     </resources>
     <color key="tintColor" red="0.1156478102189781" green="0.0" blue="0.71490077554744524" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -507,6 +526,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="tyW-wl-GY5"/>
-        <segue reference="pdL-uk-R4q"/>
+        <segue reference="6BX-gp-d9P"/>
     </inferredMetricsTieBreakers>
 </document>
