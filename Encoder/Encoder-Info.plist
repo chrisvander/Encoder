@@ -28,10 +28,10 @@
 	<string>2.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<false/>
+	<key>NSMainNibFile~ipad</key>
+	<string>MainStoryboard-iPhone-iPad</string>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard-iPhone</string>
-	<key>UIMainStoryboardFile~ipad</key>
-	<string>MainStoryboard-iPad</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -45,6 +45,17 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>encoder</string>
+			</array>
+			<key>CFBundleURLName</key>
+			<string>com.cvapps.encoder</string>
+		</dict>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Wpb-rh-yUd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5037" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Wpb-rh-yUd">
     <dependencies>
         <deployment version="1552" defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Reveal View Controller-->
@@ -237,8 +237,8 @@
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Encoder" id="NXx-xW-nKC">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="pullover.png" id="F4A-ML-dZc"/>
+                    <navigationItem key="navigationItem" title="Encoder" id="hFm-aP-iUr">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="pullover.png" id="xOl-bi-wFV"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -249,13 +249,44 @@
                         <outlet property="key2" destination="KfQ-wF-thb" id="a1o-8y-Vwd"/>
                         <outlet property="keyLabel" destination="j8y-Yb-SNw" id="UJ8-nK-7wN"/>
                         <outlet property="messageText" destination="Ecf-99-QEs" id="3U8-4H-B2X"/>
-                        <outlet property="pullOver" destination="F4A-ML-dZc" id="Siq-hR-5l8"/>
                         <segue destination="RX2-uR-itm" kind="push" identifier="pushToOutput" id="aP6-dT-jea"/>
+                        <segue destination="ti4-aj-TZx" kind="push" identifier="linkPush" id="jqq-E4-u47"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wFx-0f-bP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="258" y="190"/>
+        </scene>
+        <!--Link View Controller - Message-->
+        <scene sceneID="nLa-lC-vlo">
+            <objects>
+                <viewController id="ti4-aj-TZx" customClass="LinkViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Tz-vm-9NK"/>
+                        <viewControllerLayoutGuide type="bottom" id="EfE-Qs-caM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Chj-AF-Aav">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Loading..." translatesAutoresizingMaskIntoConstraints="NO" id="Ojg-zT-zO4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Message" id="5gD-9a-5hh">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="DFT-nG-eyz"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EVs-4h-eTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="258" y="883"/>
         </scene>
         <!--Output View Controller - Output-->
         <scene sceneID="Xfb-bl-NAt">
@@ -446,14 +477,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VZi-0L-Uj8" id="Hts-IX-bPk">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qt9-Is-pKL">
-                                                    <rect key="frame" x="5" y="5" width="310" height="165"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -478,7 +501,6 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="decodeOutput" destination="Qt9-Is-pKL" id="lgL-Tv-nZk"/>
                         <outlet property="decoding" destination="8qq-ot-KtO" id="5CS-d2-9j8"/>
                         <outlet property="encryption" destination="gro-RE-NKx" id="QnQ-fQ-I6z"/>
                         <outlet property="keyString" destination="b6n-bm-mxZ" id="Amt-Hg-YPj"/>
@@ -494,17 +516,11 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="ohU-iJ-eIP" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="z7y-ZW-hbD">
                         <rect key="frame" x="0.0" y="-44" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="MZA-hy-fCU">
-                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.1156478102189781" green="0.0" blue="0.71490077554744524" alpha="1" colorSpace="calibratedRGB"/>
-                    </toolbar>
                     <connections>
                         <segue destination="Eqc-l1-Bzw" kind="relationship" relationship="rootViewController" id="uZh-WV-uHa"/>
                     </connections>
@@ -516,7 +532,6 @@
     </scenes>
     <resources>
         <image name="pullover.png" width="25" height="26"/>
-        <image name="pullover.png" width="25" height="26"/>
     </resources>
     <color key="tintColor" red="0.1156478102189781" green="0.0" blue="0.71490077554744524" alpha="1" colorSpace="calibratedRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -525,7 +540,7 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="tyW-wl-GY5"/>
         <segue reference="6BX-gp-d9P"/>
+        <segue reference="tyW-wl-GY5"/>
     </inferredMetricsTieBreakers>
 </document>

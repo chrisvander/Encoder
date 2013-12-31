@@ -31,6 +31,9 @@
 		835FC7D817F3CFFC003E71AD /* pullover.png in Resources */ = {isa = PBXBuildFile; fileRef = 835FC7D717F3CFFC003E71AD /* pullover.png */; };
 		839B4EAB17A0245D00801BCA /* MainStoryboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83E9BA2217A0114800C34B4E /* MainStoryboard-iPad.storyboard */; };
 		83A94B2C17F0DB310034BF07 /* navbar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A94B2B17F0DB310034BF07 /* navbar_bg@2x.png */; };
+		83A95065186B34A20010CBE9 /* DecoderViewControlleriPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A95062186B34A20010CBE9 /* DecoderViewControlleriPad.m */; };
+		83A95066186B34A20010CBE9 /* TableViewControlleriPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A95064186B34A20010CBE9 /* TableViewControlleriPad.m */; };
+		83B1A8B8186D164D00495971 /* LinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B1A8B7186D164D00495971 /* LinkViewController.m */; };
 		83D6E2F317A0C44F009DD6D4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8307153717A096A100C6A3BC /* ViewController.m */; };
 		83E3D0FB17D396B900B8B212 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E3D0FA17D396B900B8B212 /* MessageUI.framework */; };
 		83F4DAC817E01116001997F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F4DAC717E01116001997F6 /* Images.xcassets */; };
@@ -82,6 +85,12 @@
 		8337407E17FD110C0077F878 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarViewController.m; path = ../SidebarViewController.m; sourceTree = "<group>"; };
 		835FC7D717F3CFFC003E71AD /* pullover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pullover.png; sourceTree = "<group>"; };
 		83A94B2B17F0DB310034BF07 /* navbar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_bg@2x.png"; sourceTree = "<group>"; };
+		83A95061186B34A20010CBE9 /* DecoderViewControlleriPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecoderViewControlleriPad.h; sourceTree = "<group>"; };
+		83A95062186B34A20010CBE9 /* DecoderViewControlleriPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecoderViewControlleriPad.m; sourceTree = "<group>"; };
+		83A95063186B34A20010CBE9 /* TableViewControlleriPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewControlleriPad.h; sourceTree = "<group>"; };
+		83A95064186B34A20010CBE9 /* TableViewControlleriPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewControlleriPad.m; sourceTree = "<group>"; };
+		83B1A8B6186D164D00495971 /* LinkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkViewController.h; sourceTree = "<group>"; };
+		83B1A8B7186D164D00495971 /* LinkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkViewController.m; sourceTree = "<group>"; };
 		83E3D0FA17D396B900B8B212 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		83E9BA2217A0114800C34B4E /* MainStoryboard-iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "MainStoryboard-iPad.storyboard"; sourceTree = "<group>"; };
 		83F4DAC717E01116001997F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -152,6 +161,8 @@
 				3F9B726217831A6800D18C78 /* AppDelegate.m */,
 				3F9B726A17831A6900D18C78 /* MainStoryboard-iPhone.storyboard */,
 				83E9BA2217A0114800C34B4E /* MainStoryboard-iPad.storyboard */,
+				83B1A8B6186D164D00495971 /* LinkViewController.h */,
+				83B1A8B7186D164D00495971 /* LinkViewController.m */,
 				8337407D17FD110C0077F878 /* SidebarViewController.h */,
 				8337407E17FD110C0077F878 /* SidebarViewController.m */,
 				3FECC4A71784B81700274C4A /* OutputViewController.h */,
@@ -160,6 +171,10 @@
 				3F76021F178454EA00B5D595 /* DecoderViewController.m */,
 				3F9B728D17831D9000D18C78 /* TableViewController.h */,
 				3F9B728E17831D9000D18C78 /* TableViewController.m */,
+				83A95061186B34A20010CBE9 /* DecoderViewControlleriPad.h */,
+				83A95062186B34A20010CBE9 /* DecoderViewControlleriPad.m */,
+				83A95063186B34A20010CBE9 /* TableViewControlleriPad.h */,
+				83A95064186B34A20010CBE9 /* TableViewControlleriPad.m */,
 				8307153617A096A100C6A3BC /* ViewController.h */,
 				8307153717A096A100C6A3BC /* ViewController.m */,
 				83F4DAC717E01116001997F6 /* Images.xcassets */,
@@ -333,10 +348,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8337407917FD08950077F878 /* SWRevealViewController.m in Sources */,
+				83A95066186B34A20010CBE9 /* TableViewControlleriPad.m in Sources */,
+				83A95065186B34A20010CBE9 /* DecoderViewControlleriPad.m in Sources */,
 				3F9B725F17831A6800D18C78 /* main.m in Sources */,
 				3F9B726317831A6800D18C78 /* AppDelegate.m in Sources */,
 				8337407F17FD110C0077F878 /* SidebarViewController.m in Sources */,
 				3F9B728F17831D9000D18C78 /* TableViewController.m in Sources */,
+				83B1A8B8186D164D00495971 /* LinkViewController.m in Sources */,
 				3F760220178454EA00B5D595 /* DecoderViewController.m in Sources */,
 				3FECC4A91784B81700274C4A /* OutputViewController.m in Sources */,
 				83D6E2F317A0C44F009DD6D4 /* ViewController.m in Sources */,

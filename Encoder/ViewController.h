@@ -7,17 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface ViewController : UITableViewController
+@interface ViewController : UITableViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate, UIActionSheetDelegate>
 {
     IBOutlet UITextView *outputPad;
     IBOutlet UITextView *decodeOutput;
     IBOutlet UIBarButtonItem *menuButton;
     __weak UIPopoverController *myPopover;
+    UIActionSheet *actionSheet;
+    IBOutlet UIBarButtonItem *sendTo;
+    BOOL doesAlertViewExist;
 }
 @property (nonatomic, retain) IBOutlet UITextView *outputPad;
 
 - (IBAction)copyButton;
 - (IBAction)refreshOutput;
+- (IBAction)sendTo;
+
+- (BOOL)doesAlertViewExist;
 
 @end

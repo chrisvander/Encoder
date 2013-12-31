@@ -7,11 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import "TableViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    tmp = 0;
+    
+    [[NSUserDefaults standardUserDefaults] setInteger:tmp forKey:@"tmp"];
+    
     UIStoryboard *storyboard;
     if ([[UIDevice currentDevice] userInterfaceIdiom] ==UIUserInterfaceIdiomPad) {
         storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard-iPad" bundle:[NSBundle mainBundle]];
@@ -27,6 +32,24 @@
     // Set root view controller and make windows visible
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
+    
+    return YES;
+    
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    NSLog(@"URL");
+    if (!url) {
+        return NO;
+    }
+    NSLog(@"URL: %@", [url absoluteString]);
+    
+    NSString *URLString = [url absoluteString];
+    [[NSUserDefaults standardUserDefaults] setObject:URLString forKey:@"url"];
+    
+    tmp = 1;
+    [[NSUserDefaults standardUserDefaults] setInteger:tmp forKey:@"tmp"];
     
     return YES;
 }

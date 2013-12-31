@@ -6,17 +6,17 @@
 //  Copyright (c) 2013 iD Student. All rights reserved.
 //
 
-#import "TableViewController.h"
+#import "TableViewControlleriPad.h"
 #import "OutputViewController.h"
-#import "DecoderViewController.h"
-#import "SWRevealViewController.h"
-#import "LinkViewController.h"
+#import "ViewController.h"
 
-@interface TableViewController ()
+@interface TableViewControlleriPad ()
 
 @end
 
-@implementation TableViewController
+@protocol ViewControllerDelegate;
+
+@implementation TableViewControlleriPad
 @synthesize messageText;
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -29,12 +29,6 @@
     messageText.text = [[messageText.text componentsSeparatedByCharactersInSet:[NSCharacterSet punctuationCharacterSet]] componentsJoinedByString:@""];
     messageText.text =[[NSString alloc] initWithData:[messageText.text dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES] encoding:NSASCIIStringEncoding];
     return YES;
-}
-
-- (void)processLink
-{
-   NSLog(@"Process Link");
-   [self performSegueWithIdentifier:@"linkPush" sender:self];
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -65,27 +59,10 @@
    [alert show];
 }
 
-- (void)reloadURL
-{
-   [self performSelector:@selector(reloadURL2) withObject:self afterDelay:0.1];
-}
-
-- (void)reloadURL2
-{
-   NSLog(@"Registered URL");
-   if ([[NSUserDefaults standardUserDefaults] integerForKey:@"tmp"] == 1) {
-      NSLog (@"Performed segue");
-      [self performSegueWithIdentifier:@"linkPush" sender:self];
-   }
-}
-
 - (void)viewDidLoad
 {
    [super viewDidLoad];
    
-   [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadURL) name:UIApplicationWillEnterForegroundNotification object:nil];
-
-   NSLog(@"loaded");
    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
    numberToolbar.barStyle = UIBarStyleBlackOpaque;
    numberToolbar.items = [NSArray arrayWithObjects:
@@ -109,15 +86,7 @@
                                                           [UIFont fontWithName:@"HelveticaNeue-Light" size:21.0], UITextAttributeFont, nil]];
    encoding.hidden = YES;
    
-   // Set the side bar button action. When it's tapped, it'll show up the sidebar.
-   pullOver.target = self.revealViewController;
-   pullOver.action = @selector(revealToggle:);
-   
-   // Set the gesture
-   [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
-   
    [key addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
-
 }
 
 - (IBAction)sliderValueChanged:(UISlider *)sender
@@ -228,6 +197,9 @@
    if ([[UIDevice currentDevice] userInterfaceIdiom] ==UIUserInterfaceIdiomPhone) {
       [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(interval) userInfo:nil repeats:NO];
    }
+    ViewController *vc = [[ViewController alloc] init];
+    [vc refreshOutput];
+    NSLog(@"Did refreshOutput");
 }
 
 - (void)interval
