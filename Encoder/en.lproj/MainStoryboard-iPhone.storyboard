@@ -249,6 +249,7 @@
                         <outlet property="key2" destination="KfQ-wF-thb" id="a1o-8y-Vwd"/>
                         <outlet property="keyLabel" destination="j8y-Yb-SNw" id="UJ8-nK-7wN"/>
                         <outlet property="messageText" destination="Ecf-99-QEs" id="3U8-4H-B2X"/>
+                        <outlet property="pullOver" destination="xOl-bi-wFV" id="lmh-Rd-O5y"/>
                         <segue destination="RX2-uR-itm" kind="push" identifier="pushToOutput" id="aP6-dT-jea"/>
                         <segue destination="ti4-aj-TZx" kind="push" identifier="linkPush" id="jqq-E4-u47"/>
                     </connections>
@@ -279,9 +280,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Message" id="5gD-9a-5hh">
-                        <barButtonItem key="rightBarButtonItem" title="Close" id="DFT-nG-eyz"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Message" id="5gD-9a-5hh"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EVs-4h-eTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
