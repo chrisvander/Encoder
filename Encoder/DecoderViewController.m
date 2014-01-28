@@ -165,9 +165,22 @@
     [decoding setHidden:YES];
 }
 
+-(void)doneWithNumberPad{
+    [keyString resignFirstResponder];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
+    numberToolbar.barStyle = UIBarStyleBlackOpaque;
+    numberToolbar.items = [NSArray arrayWithObjects:
+                           [[UIBarButtonItem alloc]initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(doneWithNumberPad)],
+                           nil];
+    [numberToolbar sizeToFit];
+    keyString.inputAccessoryView = numberToolbar;
+    
     decoding.hidden = YES;
     self.tableView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:1 alpha:1];
     encryption.delegate=self;

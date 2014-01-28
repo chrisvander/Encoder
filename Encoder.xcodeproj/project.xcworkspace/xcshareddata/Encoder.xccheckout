@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>FD2B0AF8-72C9-4A03-A050-8C33FA8A707B</string>
+	<string>E16E982A-A0DA-437E-BA56-22E868DA4ED5</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Encoder</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/chrisvander/Encoder.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Encoder/Encoder.xcodeproj/project.xcworkspace</string>
+	<string>Encoder.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>65B2C520-EEA9-4564-B688-E0BBE9EB3FE0</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/chrisvander/Encoder.git</string>

@@ -476,6 +476,15 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VZi-0L-Uj8" id="Hts-IX-bPk">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Waiting.." translatesAutoresizingMaskIntoConstraints="NO" id="7Qf-YU-8T7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="175"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -500,6 +509,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="decodeOutput" destination="7Qf-YU-8T7" id="Mod-R0-B6D"/>
                         <outlet property="decoding" destination="8qq-ot-KtO" id="5CS-d2-9j8"/>
                         <outlet property="encryption" destination="gro-RE-NKx" id="QnQ-fQ-I6z"/>
                         <outlet property="keyString" destination="b6n-bm-mxZ" id="Amt-Hg-YPj"/>

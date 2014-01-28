@@ -253,6 +253,6 @@
    if (bgImage == nil) {
       bgImage = [UIImage imageNamed:@"myimage.png"];
    }
-   cell.backgroundView = [[UIImageView alloc] initWithImage:bgImage]; 
+   cell.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
 }
 @end
